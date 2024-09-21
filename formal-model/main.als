@@ -2,11 +2,13 @@ module main
 
 abstract sig Status {}
 sig EmEspera, Apto, Rejeitado extends Status {}
+sig Perfil {}
 
 abstract sig Usuario {}
 sig Professor extends Usuario {}
 sig Aluno extends Usuario {
-    avaliacoes: set Avaliacao
+    avaliacoes: set Avaliacao,
+    perfil: one Perfil
 }
 
 sig Projeto {
@@ -24,6 +26,10 @@ sig Avaliacao {
     aluno: one Aluno,
     descricao: String,
     autor: one Professor
+}
+
+fact UmPerfilPorAluno {
+    all p: Perfil | one a: Aluno | a.perfil = p
 }
 
 fact TodoAlunoEmProjetoDeveTerCandidatura {
@@ -57,7 +63,7 @@ pred demonstrarInteresse [a: Aluno, p: Projeto] {
     some c: Candidatura | a = c.aluno and p in c.projeto and c.status = EmEspera
 }
 
-run {} for exactly 3 Aluno, 3 Status, 2 Projeto, 1 Professor, 2 Candidatura, 1 Avaliacao
+run {} for exactly 3 Aluno, 3 Status, 2 Projeto, 1 Professor, 2 Candidatura, 1 Avaliacao, 3 Perfil
 
 
 assert AlunoEmProjetoTemCandidatura {
