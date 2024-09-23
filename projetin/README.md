@@ -29,7 +29,7 @@ docker compose up --build
 Isso irá iniciar os seguintes serviços:
 
 - Frontend: Acessível em http://localhost:3000
-- Backend: Acessível em http://localhost:5000
+- Backend: Acessível em http://localhost:8000
 - Banco de Dados
 
 ### Passo 3: Encerrar o sistema
