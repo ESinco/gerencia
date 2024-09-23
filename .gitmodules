@@ -1,0 +1,6 @@
+[submodule "projetin/backend"]
+	path = projetin/backend
+	url = git@github.com:ESinco/backend.git
+[submodule "projetin/frontend"]
+	path = projetin/frontend
+	url = git@github.com:ESinco/frontend.git
