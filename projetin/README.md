@@ -17,7 +17,7 @@ Utilizamos o formato em submódulos para facilitar o mapeamento e a execução.
 
 ## Configuração
 
-### Passo 1: Clone o [repositório de gerência](https://github.com/ESinco/gerencia.git)
+### Passo 1: Clone do [repositório do ProjetIn](https://github.com/ESinco/gerencia.git)
 Uma vez clonado o repositório, entre no diretório `/projetin`.
 
 ### Passo 2: Build e Inicialização do Sistema
@@ -32,7 +32,11 @@ Isso irá iniciar os seguintes serviços:
 - Backend: Acessível em http://localhost:8000
 - Banco de Dados
 
-### Passo 3: Encerrar o sistema
+### Passo 3: Acesso a funcionalidades do Sistema
+Acesse o endpoint do frontend para ter acesso à aplicação. No navegador, digite:
+`http://localhost:3000/login`
+
+### Passo 4: Encerrar o Sistema
 Para parar a aplicação e remover os containers:
 ```sh
 docker compose down
