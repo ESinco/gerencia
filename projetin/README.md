@@ -39,7 +39,5 @@ Acesse o endpoint do frontend para ter acesso à aplicação. No navegador, digi
 ### Passo 4: Encerrar o Sistema
 Para parar a aplicação e remover os containers:
 ```sh
-docker compose down
+docker compose down -v
 ```
-- Use a opção `-v` se desejar apagar o volume associado, ou seja, os dados do banco de dados.
-
